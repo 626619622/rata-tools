@@ -1,0 +1,22 @@
+{
+  "title": "rata-tools: Role-Aware Transportability Audit primitives",
+  "description": "<p>rata-tools 0.2.0 provides reusable Python primitives for auditing the transportability of transcriptomic signatures. It implements evidence-capacity metrics, selection-aware cross-validation, matched selection-null decisions, binary and cohort-stratified survival transport gates, Harrell C-index utilities, and structured three-gate decisions. The release includes a Python API, command-line interface, tests, examples, documentation and continuous-integration configuration.</p>",
+  "creators": [
+    {
+      "name": "Zhao, Jiakang",
+      "affiliation": "Zhongda Hospital, Southeast University",
+      "orcid": "0009-0006-4878-0626"
+    }
+  ],
+  "upload_type": "software",
+  "publication_date": "2026-11-10",
+  "version": "0.2.0",
+  "license": "MIT",
+  "keywords": [
+    "transportability",
+    "external validation",
+    "transcriptomics",
+    "evidence audit",
+    "reproducible software"
+  ]
+}

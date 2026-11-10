@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite this software using the metadata below."
+title: "rata-tools: Role-Aware Transportability Audit primitives"
+type: software
+authors:
+  - family-names: Zhao
+    given-names: Jiakang
+    affiliation: "Zhongda Hospital, Southeast University"
+    orcid: "https://orcid.org/0009-0006-4878-0626"
+version: 0.2.0
+date-released: "2026-11-10"
+license: MIT
+abstract: >-
+  Reusable primitives for selection-aware, transportability and role-aware
+  auditing of transcriptomic signatures.
+

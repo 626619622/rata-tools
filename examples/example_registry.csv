@@ -1,0 +1,6 @@
+signature_id,cohort,platform,events,independent
+sig_a,ASU,GPL570,17,true
+sig_a,ENSAT,GPL570,20,true
+sig_b,ASU,GPL570,17,true
+sig_b,Michigan,GPL570,16,true
+
