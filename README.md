@@ -8,7 +8,7 @@ produce a composite "quality score".
 ## Install
 
 ```bash
-pip install rata-tools
+pip install https://github.com/626619622/rata-tools/releases/download/v0.2.0/rata_tools-0.2.0-py3-none-any.whl
 ```
 
 For a local development install:
