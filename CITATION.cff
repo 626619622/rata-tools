@@ -8,9 +8,10 @@ authors:
     affiliation: "Zhongda Hospital, Southeast University"
     orcid: "https://orcid.org/0009-0006-4878-0626"
 version: 0.2.0
-date-released: "2026-11-10"
+date-released: "2026-11-12"
 license: MIT
+doi: "10.5281/zenodo.24156617"
+url: "https://github.com/626619622/rata-tools/releases/tag/v0.2.0"
 abstract: >-
   Reusable primitives for selection-aware, transportability and role-aware
   auditing of transcriptomic signatures.
-
