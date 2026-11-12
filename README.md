@@ -72,3 +72,9 @@ RATA audits evidence. It does not estimate causal effects, replace batch
 correction, deconvolution or domain-generalization methods, or manufacture
 independent cohorts.
 
+
+## Archived release
+
+Software DOI: [`10.5281/zenodo.24156617`](https://doi.org/10.5281/zenodo.24156617)
+
+GitHub release: https://github.com/626619622/rata-tools/releases/tag/v0.2.0
