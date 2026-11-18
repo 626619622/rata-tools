@@ -22,7 +22,7 @@ from rata_tools import (
 
 class RATATests(unittest.TestCase):
     def test_version(self):
-        self.assertEqual(__version__, "0.2.0")
+        self.assertEqual(__version__, "0.2.1")
 
     def test_effective_cluster_number(self):
         self.assertAlmostEqual(effective_cluster_number([4, 2, 2]), 2.6666667)

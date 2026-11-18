@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1
+
+- Added a tested Docker recipe and `.dockerignore`.
+- Added pinned direct runtime dependencies and a `make lock` target.
+- Included analysis scripts in the source distribution.
+- Synchronized the release metadata and public archive layout.
+
 ## 0.2.0
 
 - Added public `evidence_capacity` API.

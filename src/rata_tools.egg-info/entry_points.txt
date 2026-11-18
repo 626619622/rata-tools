@@ -1,0 +1,2 @@
+[console_scripts]
+rata-tools = rata_tools.cli:main

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rata-tools"
-version = "0.2.0"
+version = "0.2.1"
 description = "Role-Aware Transportability Audit primitives for transcriptomic signatures"
 readme = "README.md"
 requires-python = ">=3.10"

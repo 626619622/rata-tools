@@ -1,0 +1,34 @@
+param(
+    [Parameter(Mandatory = $false)]
+    [string]$Revision = "codex_output\endocrine-transport-project\cmpb_submission_20261118"
+)
+
+$ErrorActionPreference = "Stop"
+$userProfile = [Environment]::GetFolderPath("UserProfile")
+$sourcePath = Join-Path $userProfile "Documents\deepseek-harness\default-workspace\rata_final"
+$revisionPath = (Resolve-Path -LiteralPath $Revision).Path
+$package = Join-Path $revisionPath "CMPB_Submission_v4"
+New-Item -ItemType Directory -Force -Path $package | Out-Null
+
+Copy-Item -LiteralPath (Join-Path $revisionPath "RATA_CMPB_Manuscript_v4.docx") -Destination (Join-Path $package "RATA_CMPB_Manuscript_v4.docx")
+Copy-Item -LiteralPath (Join-Path $revisionPath "render_v4/RATA_CMPB_Manuscript_v4.pdf") -Destination (Join-Path $package "RATA_CMPB_Manuscript_v4.pdf")
+Copy-Item -LiteralPath (Join-Path $revisionPath "references_verified_v3.md") -Destination (Join-Path $package "references_verified.md")
+Copy-Item -LiteralPath (Join-Path $revisionPath "SUBMISSION_CHECKLIST_v3.md") -Destination (Join-Path $package "SUBMISSION_CHECKLIST.md")
+Copy-Item -LiteralPath (Join-Path $revisionPath "Gate1_Final_Lock.md") -Destination (Join-Path $package "Gate1_Final_Lock.md")
+Copy-Item -LiteralPath (Join-Path $revisionPath "RATA_v5_double_null_selection_gate_final.csv") -Destination (Join-Path $package "RATA_v5_double_null_selection_gate_final.csv")
+Copy-Item -LiteralPath (Join-Path $revisionPath "RATA_v5_double_null_selection_gate_final.json") -Destination (Join-Path $package "RATA_v5_double_null_selection_gate_final.json")
+Copy-Item -LiteralPath (Join-Path $revisionPath "reference_identifier_resolution_v3.md") -Destination (Join-Path $package "reference_identifier_resolution.md")
+Copy-Item -LiteralPath (Join-Path $revisionPath "citation_coverage_v2.md") -Destination (Join-Path $package "citation_coverage.md")
+Copy-Item -LiteralPath (Join-Path $revisionPath "RATA_CMPB_Status_v3.md") -Destination (Join-Path $package "RATA_CMPB_Status.md")
+
+Copy-Item -LiteralPath (Join-Path $sourcePath "RATA_CMPB_CoverLetter.docx") -Destination (Join-Path $package "RATA_CMPB_CoverLetter.docx")
+Copy-Item -LiteralPath (Join-Path $sourcePath "figures") -Destination $package -Recurse
+
+$zip = Join-Path $revisionPath "RATA_CMPB_Submission_v4.zip"
+if (Test-Path -LiteralPath $zip) {
+    throw "Refusing to overwrite existing archive: $zip"
+}
+Compress-Archive -LiteralPath $package -DestinationPath $zip -CompressionLevel Optimal
+
+Get-ChildItem -LiteralPath $package | Select-Object Name,Length,Mode | Format-Table -AutoSize
+Write-Output $zip
